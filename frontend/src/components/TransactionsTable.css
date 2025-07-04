@@ -1,0 +1,135 @@
+.transaction-container {
+  margin-top: 30px;
+  background: linear-gradient(to right, #eef2ff, #ffffff);
+  border: 2px solid #6366f1;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 6px 18px rgba(99, 102, 241, 0.1);
+  overflow-x: auto;
+}
+
+/* Table core layout */
+.transaction-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 8px;
+  text-align: left;
+  border: 2px solid black; 
+}
+
+.transaction-search {
+  padding: 16px 20px;
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 0 auto 30px auto;
+  border-radius: 10px;
+  border: 2px solid #6366f1;
+  background-color: #f0f4ff;
+  font-size: 18px;
+  color: #1f2937;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.1);
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.transaction-search::placeholder {
+  color: #9ca3af;
+  font-style: italic;
+}
+
+.transaction-search:focus {
+  border-color: #4f46e5;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.2);
+}
+
+
+/* Header styling */
+.transaction-table thead th {
+  background-color: #4f46e5;
+  color: white;
+  padding: 14px 16px;
+  font-weight: 600;
+  border: 1px solid black; 
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+/* Body cell styling */
+.transaction-table tbody td {
+  background-color: white;
+  padding: 14px 16px;
+  border: 1px solid black; 
+  transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+
+
+/* Stripe effect (optional) */
+.transaction-table tbody tr:nth-child(even) td {
+  background-color: #f9f9ff;
+}
+
+/* Smooth transition on hover */
+.transaction-table tbody tr {
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Sold status colors */
+.sold-yes {
+  color: green;
+  font-weight: bold;
+}
+
+.sold-no {
+  color: red;
+  font-weight: bold;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+  padding: 0 12px;
+}
+
+.prev-button,
+.next-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+/* Blue box for Previous */
+.prev-button {
+  background-color: #3b82f6; 
+  color: white;
+}
+
+/* Red box for Next */
+.next-button {
+  background-color: #ef4444; 
+  color: white;
+}
+
+/* Hover effect */
+.prev-button:hover,
+.next-button:hover {
+  opacity: 0.9;
+  transform: scale(1.03);
+}
+
+/* Page Info */
+.page-info {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  flex-grow: 1;
+}
